@@ -2,7 +2,7 @@
   "name": "GraphQL_Guide",
   "version": "1.0.0",
   "description": "",
-  "main": "helloWorld.js",
+  "main": "helloGraphQL.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>graphQL_client</title>
+</head>
+<body>
+  <button onclick="getJSON()">Get JSON</button>
+</body>
+<script>
+    function getJSON() {
+      const query = `
+        query GetStudent($sno: String!) {
+          getStudent(sno: $sno) {
+            name
+            address
+            age
+            classNo
+          } 
+        }
+      `
+
+      const variables = {
+        sno: "201310119000"
+      }
+
+      fetch('/graphql', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+        body: JSON.stringify({
+          query,
+          variables
+        })
+      })
+      .then(resp => resp.json)
+      .then(json => {
+        console.error(json)
+      })
+    }
+</script>
+</html>
