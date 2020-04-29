@@ -1,9 +1,8 @@
 const express = require('express');
 const { buildSchema } = require('graphql');
 const graphqlHttp = require('express-graphql');
+
 const mysql = require('mysql');
-
-
 const connection = mysql.createConnection({
   host: 'localhost',
   user: 'root',
@@ -77,7 +76,7 @@ const rootValue = {
   createStudent ({ input }) {
     // sql
     // return new Promise((resolve, reject) => {
-    //   pool.query('insert into Student set ?', input, (err) => {
+    //   connection.query('insert into Student set ?', input, (err) => {
     //     if (err) {
     //       return
     //     }
