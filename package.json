@@ -16,5 +16,11 @@
   "bugs": {
     "url": "https://github.com/ourvibes/GraphQL_Guide/issues"
   },
-  "homepage": "https://github.com/ourvibes/GraphQL_Guide#readme"
+  "homepage": "https://github.com/ourvibes/GraphQL_Guide#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "express-graphql": "^0.9.0",
+    "graphql": "^15.0.0",
+    "mysql": "^2.18.1"
+  }
 }
